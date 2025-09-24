@@ -4,6 +4,7 @@ from psycopg2 import sql
 import argparse
 import os
 
+#ты котик
 
 def check_db_connection(dbname, user, password, host='localhost', port=5432):
     """Проверяет подключение к БД."""
