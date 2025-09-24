@@ -1,2 +1,24 @@
-# db-backup-utility
-A Python utility for backing up and restoring a PostgreSQL database.
+# Утилита для бэкапа и восстановления базы данных PostgreSQL
+
+## Описание
+Это простой скрипт на Python для создания бэкапа базы данных PostgreSQL и её восстановления из файла. Использует `pg_dump` для бэкапа и `pg_restore` для восстановления. Библиотека `psycopg2` применяется для проверки подключения и создания БД при необходимости.
+
+Проект создан для демонстрации навыков работы с Python, базами данных и инструментами PostgreSQL. Идеален для собеседований или личного использования.
+
+## Требования
+- Python 3.x
+- PostgreSQL установлен (с доступными `pg_dump` и `pg_restore`)
+- Библиотека: `pip install psycopg2-binary`
+- Доступ к БД (пользователь с правами на бэкап/восстановление)
+
+## Установка
+1. Клонируйте репозиторий: `git clone https://github.com/ваш-username/db-backup-utility.git`
+2. Перейдите в папку: `cd db-backup-utility`
+3. Установите зависимости: `pip install -r requirements.txt` (создайте файл requirements.txt с `psycopg2-binary`)
+
+## Использование
+Скрипт запускается из командной строки с аргументами.
+
+### Бэкап
+```bash
+python backup_restore.py --action backup --dbname <имя_бд> --user <пользователь> --password <пароль> --file <файл_бэкапа.dump>
